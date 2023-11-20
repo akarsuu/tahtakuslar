@@ -1,0 +1,1719 @@
+*{
+    text-decoration:none;
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+    
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: none;
+    
+  }
+  #mainNavFrame{
+    width:100%;
+    height:8%;
+    background-color: rgba(255, 255, 255, 0.93);;
+    position:fixed;
+    display:flex;
+    flex-direction:column;
+    margin-top:0;
+    z-index:11;
+    padding-top: 1%;
+    }
+.header{
+    position:relative;
+    width:100%;
+    height:95%;
+    display:flex;
+    justify-content:space-between;
+    flex-direction: row;
+    align-items:center;
+    padding: 0 25px;
+    transition: 0.5s;
+}
+.logo{
+    font-family:'Mulish', sans-serif;
+    color:#4E5B65;
+    font-size:18px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding:1%;
+    margin-top: 0%;
+    width: 10%;
+}
+.logoImage{
+    width:83px;
+}
+.mottoContainer{
+    display: flex;
+    flex-direction: column;
+    padding-left: 0px;
+    width: 100%;
+    margin-top: -1%;
+    margin-left: -.5%;
+}
+#tahtakuslar{
+    font-family:'Mulish', sans-serif;
+    color:#4E5B65;
+    font-size:20px;
+    margin-top:5px;
+    font-weight: 600;
+}
+#galery{
+    font-family: 'Mulish', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    padding-left: 0px;
+    margin-top: -6px;
+    margin-left:2px;
+    color:#0D4559;
+}
+
+.navigation {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.menu{
+    display:flex;
+    justify-content:center;
+    flex-direction:row;
+    align-items:center;
+    transition: 0.8s ease-in-out;
+}
+#linksContainer{
+    display:flex;
+    flex-direction: row;
+    
+}
+.menu li{
+    list-style-type:none;
+    padding: 14px 25px 12px 10px;
+}
+.menu li a{
+    color:#4E5B65;
+    text-decoration:none;
+    font-family:'Mulish', sans-serif;
+    display:block;
+    letter-spacing:0.1px;
+    background-color:transparent;
+    font-size:19px;
+    font-weight:400;
+    line-height:30px;
+    transition:0.3s;
+    white-space:nowrap;
+}
+
+.menu li a:hover{
+    color:#4e7e90;
+}
+.menu li a.inactiveLink {
+    color: #DA6425; /* Set the inactive color */
+    pointer-events: none; /* Make the link non-clickable */
+}
+#langlink{
+    font-size: 12px;
+}
+
+.menu li a:hover{
+    color:none;
+}
+
+#buttonContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right:15px;    
+}
+
+#buttonButik{
+    width: fit-content;
+    background-color: #DA6425;
+    color: white;
+    padding:8px 15px 8px 15px;
+    margin-top: 0px;
+    border-radius: 30px;
+    z-index: 1;
+}
+
+.hamburger{
+    position:relative;
+    width:25px;
+    height:3px;
+    background:#DA6425;
+    border-radius:15px;
+    cursor:pointer;
+    transition:0.3s;
+    z-index:2;
+}
+
+.hamburger:before,
+.hamburger:after{
+    content:"";
+    position:absolute;
+    height:3px;
+    right:0;
+    background:#DA6425;
+    transition:0.3s;
+}
+
+.hamburger:before {
+    top: -10px;
+    width:24px;
+ }
+
+.hamburger:after {
+    top: 10px;
+    width:25px;
+}
+
+.toggle-menu {
+    position:absolute;
+    width:30px;
+    height:25px;
+    cursor:pointer;
+    opacity:0;
+    z-index:3;
+}
+
+.hamburger,
+.toggle-menu {
+    display:none;
+}
+
+.navigation input:checked ~ .hamburger
+{
+    background: transparent;
+}
+
+.navigation input:checked ~ .hamburger:before
+{
+    top:0;
+    transform: rotate(-45deg);
+    width:24px;
+}
+
+.navigation input:checked ~ .hamburger:after
+{
+    top:0;
+    transform: rotate(45deg);
+    width:24px;
+}
+
+
+.navigation input:checked ~ .menu{
+    right: 0;
+}
+
+
+/********CAROUSEL******************************************************************/
+.carousel-img-size{
+    height:80vh;
+    margin-top: -0.2%;  
+}
+
+#carouselExampleIndicators{
+    padding-top: 3.4%;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 35px; /* Set the desired width */
+    height: 35px; /* Set the desired height */
+    background-color: rgba(255, 69, 0, 1);/* Set the background color */
+    border-radius: 50%; /* Make the buttons circular */
+    text-align: center; /* Center the text horizontally */
+    transition: background-color 0.3s, color 0.8s; /* Add a transition for hover effect */
+  }
+  .carousel-control-prev:hover,
+  .carousel-control-next:hover {
+    background-color: rgba(255, 69, 0, 1); /* Set the background color with 100% opacity on hover */
+    color: #fff; /* Set the text color on hover */
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    background-color: #DA6425; /* Set the initial background color with less than 100% opacity for non-hover state */
+    color: #fff; /* Set the initial text color for non-hover state */
+  }
+.carousel-control-prev{
+    margin-left:5%;
+    margin-top: 17%;
+    opacity: 1;
+  }
+.carousel-control-next{
+    margin-right:5%;
+    margin-top: 17%;
+    opacity: 1;
+}
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  width: 14px;
+  height: 14px;
+  
+}
+  /* Customize the active indicator color */
+
+.carousel-indicators{
+    background-color: rgb(68, 59, 53);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    width: 8%;
+    margin:auto;
+    margin-bottom:35px;
+    justify-content: space-around;
+    opacity: 0.6;
+}
+  .carousel-indicators .custom-indicator{
+    background-color: orangered;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+/******************************MOTTO***************************/
+
+#motto{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2%;
+}
+
+#h1{
+    font-family: 'Mulish', 'sans-serif';
+    font-size: 50px;
+    color: #4E5B65;
+    letter-spacing: 2.6px;
+}
+#firstMotto{
+    display: flex;
+    font-family: 'Mulish', 'sans-serif';
+    font-size: 50px;
+    color: #4E5B65;
+    letter-spacing: -2.1px;
+}
+h2{
+    font-family: 'Mulish', 'sans-serif';
+    font-size: 33px;
+    font-weight: 300;
+    color: #4E5B65;
+    letter-spacing: -1px;
+}
+#secondMotto{
+    display: flex;
+}
+
+/************************SOUNDCLOUD************************/
+#soundCloud{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+/*********************VITRIN********************************/
+/***************FirstItem*****************/
+#vitrinContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    position: relative;
+    margin: auto;
+    width: 100%;
+}
+
+#vitrinFirstLine {
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    margin: auto;
+    background-color: transparent;
+    height: 400px; /* Set the fixed height you want */
+    padding-bottom: .5%;
+    position: relative;
+}
+
+#vitrinFirstLineFirstItem {
+    display: flex;
+    flex-direction: row;
+    width: 67%;
+    height: 100%;
+    padding-right: 0%;
+    background-color: none;
+    overflow: hidden;
+    position: relative;
+    
+}
+#vitrinFirstLineFirstItem img {
+    background-color: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+#vitrinFirstLineFirstItem a {
+    width:100%;
+}
+
+#legendKaz {
+    position: absolute;
+    margin-top: 32%; /* Adjust the top position as needed */
+    margin-left: 3%; /* Adjust the left position as needed */
+    background-color: rgba(41, 40, 39, 0.7); /* Background color with transparency */
+    padding: 5px 5px 5px 5px;
+    border-radius: 5px;
+    font-family: 'Mulish', 'sans-serif';
+    font-size: 30px;
+    font-weight: 800;
+    color:white;
+    z-index: 2;
+    transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+#vitrinFirstLineFirstItem:hover #legendKaz{
+    transform: translate(0, -310%);
+    background-color: transparent;
+    color:rgba(255, 255, 255, 0.7);    
+}
+
+#txtKaz {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    text-align: left;
+    font-family: 'Mulish', 'sans-serif';
+    font-weight: 400;
+    padding: 4% 3% 3% 3.4%; /* Adjust padding as needed */
+    height: 160%; /* Cover the entire height of the container */
+    margin-top: 20%;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    line-height: 28px;
+    color: white;
+    background-color: rgba(41, 40, 39, 0.5);
+    word-wrap: break-word;
+    opacity: 0;
+    transition: opacity 1.2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
+  
+  #vitrinFirstLineFirstItem:hover #txtKaz {
+    opacity: 1; /* Change the opacity to 1 on hover */
+  }
+
+/**************SECONDITEM*****************/
+
+#vitrinFirstLineSecondItem {
+    background-color: none;
+    width: 32.3%;
+    height: 100%;
+    margin-left: 0.7%;
+    overflow: hidden;
+    position: relative;
+}
+
+#vitrinFirstLineSecondItem a{
+    width:100%;
+}
+
+#vitrinFirstLineSecondItem img {
+    background-color: none;
+    width: 100%;
+    height: 100%; /* Allow the image to maintain its aspect ratio */
+    object-fit: cover;
+}
+
+#legendKultur {
+    position: absolute;
+    margin-top: 65.5%; /* Adjust the top position as needed */
+    margin-left: 6%; /* Adjust the left position as needed */
+    background-color: rgba(41, 40, 39, 0.7); /* Background color with transparency */
+    padding: 5px 5px 5px 5px;
+    border-radius: 5px;
+    font-family: 'Mulish', 'sans-serif';
+    font-size: 30px;
+    font-weight: 800;
+    color:white;
+    z-index: 2;
+    transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+#vitrinFirstLineSecondItem:hover #legendKultur{
+    transform: translate(0, -300%);
+    background-color: transparent;
+    color:rgba(255, 255, 255, 0.7);   
+}
+
+#txtKultur {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    text-align: left;
+    font-family: 'Mulish', 'sans-serif';
+    font-weight: 400;
+    padding-left: 6.8%;
+    padding-right: 3%;
+    padding-top: 8%;
+    padding-bottom: 3%;
+    height: 160%;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    line-height: 28px;
+    color: white;
+    margin-top: 41%;
+    background-color: rgba(41, 40, 39, 0.5);
+    word-wrap: break-word;
+    opacity: 0; /* Start with 0 opacity */
+    transition: opacity 1.2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
+  
+  #vitrinFirstLineSecondItem:hover #txtKultur {
+    opacity: 1; /* Change the opacity to 1 on hover */
+  }
+/*******************THIRDITEM*********************/
+
+
+#vitrinSecondLine {
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    margin: auto;
+    background-color: none;
+    height: 400px; /* Set the fixed height you want */
+    padding-bottom: .5%;
+}
+
+
+#vitrinSecondLineFirstItem {
+    
+    background-color: none;
+    width: 32.3%;
+    height: 100%;
+    padding-right: 0%;
+    overflow: hidden;
+    position: relative;
+    }
+
+
+#vitrinSecondLineFirstItem img {
+    background-color: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#legendTarih {
+    position: absolute;
+    margin-top: 65.5%; /* Adjust the top position as needed */
+    margin-left: 6%; /* Adjust the left position as needed */
+    background-color: rgba(41, 40, 39, 0.7); /* Background color with transparency */
+    padding: 5px 5px 5px 5px;
+    border-radius: 5px;
+    font-family: 'Mulish', 'sans-serif';
+    font-size: 30px;
+    font-weight: 800;
+    color:white;
+    z-index: 2;
+    transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+#vitrinSecondLineFirstItem:hover #legendTarih{
+    transform: translate(0, -317%);
+    background-color: transparent;
+    color:rgba(255, 255, 255, 0.7);
+}
+
+#txtTarih {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    text-align: left;
+    font-family: 'Mulish', 'sans-serif';
+    font-weight: 400;
+    padding-left: 6.8%;
+    padding-right: 3%;
+    padding-top: 8%;
+    padding-bottom: 3%;
+    height: 160%;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    line-height: 28px;
+    color: white;
+    margin-top: 41%;
+    background-color: rgba(41, 40, 39, 0.5);
+    word-wrap: break-word;
+    opacity: 0; /* Start with 0 opacity */
+    transition: opacity 1.2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+  
+  #vitrinSecondLineFirstItem:hover #txtTarih {
+    opacity: 1; /* Change the opacity to 1 on hover */
+  }
+/*****************FOURTHITEM********************/
+#vitrinSecondLine {
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    margin: auto;
+    background-color: none;
+    height: 400px; /* Set the fixed height you want */
+    padding-bottom: .5%;
+}
+
+#vitrinSecondLineSecondItem {
+    background-color: none;
+    width: 67%;
+    height: 100%;
+    margin-left: 0.7%;
+    overflow: hidden;
+    position: relative;
+}
+
+#vitrinSecondLineSecondItem img {
+    background-color: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#legendGaleri {
+    position: absolute;
+    margin-top: 32%; /* Adjust the top position as needed */
+    margin-left: 3%; /* Adjust the left position as needed */
+    background-color: rgba(41, 40, 39, 0.7); /* Background color with transparency */
+    padding: 5px 5px 5px 5px;
+    border-radius: 5px;
+    font-family: 'Mulish', 'sans-serif';
+    font-size: 30px;
+    font-weight: 800;
+    color:white;
+    z-index: 2;
+    transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+#vitrinSecondLineSecondItem:hover #legendGaleri{
+    transform: translate(0, -310%);
+    background-color: transparent;
+    color:rgba(255, 255, 255, 0.7);
+}
+
+#txtGaleri {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    text-align: left;
+    font-family: 'Mulish', 'sans-serif';
+    font-weight: 400;
+    width: 99.1%; /* Cover 48.9% of the container horizontally */
+    height: 160%; /* Cover the entire height of the container */
+    margin-top: 20%;
+    margin-left: 2%;
+    padding-top: 4%;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    line-height: 28px;
+    color: white;
+    background-color: rgba(41, 40, 39, 0.5);
+    word-wrap: break-word;
+    opacity: 0;
+    transition: opacity 1.2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    top: 0; /* Position from the top of the container */
+    left: 0; /* Position from the left of the container */
+  }
+  
+  #vitrinSecondLineSecondItem:hover #txtGaleri {
+    opacity: 1; /* Change the opacity to 1 on hover */
+  }
+
+/**************************FIFTHITEM**********************/
+
+#vitrinThirdLine {
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    margin: auto;
+    background-color: none;
+    height: 400px; /* Set the fixed height you want */
+}
+
+#vitrinThirdLineFirstItem {
+    background-color: none;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+#vitrinThirdLineFirstItem img {
+    background-color: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#vitrinThirdLineFirstItem a{
+    width:100%;
+}
+
+#legendIletisim {
+    position: absolute;
+    margin-top: 22%; /* Adjust the top position as needed */
+    margin-left: 1.95%; /* Adjust the left position as needed */
+    background-color: rgba(41, 40, 39, 0.7); /* Background color with transparency */
+    padding: 5px;
+    border-radius: 5px;
+    font-family: 'Mulish', 'sans-serif';
+    font-size: 30px;
+    font-weight: 800;
+    color:white;
+    z-index: 2;
+    transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+#vitrinThirdLineFirstItem:hover #legendIletisim{
+    transform: translate(0, -495%);
+    background-color: transparent;
+    color:rgba(255, 255, 255, 0.7);
+}
+
+#txtIletisim {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    text-align: left;
+    font-family: 'Mulish', 'sans-serif';
+    font-weight: 400;
+    padding: auto;
+    padding-left: 2.3%;
+    padding-right: 3%;
+    padding-top: 8%;
+    padding-bottom: 1.5%;
+    width: 32.4%;
+    height: 100%;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    line-height: 28px;
+    color: white;
+    margin-top: 0%;
+    margin-left: 0%;
+    background-color: rgba(12, 51, 65, 0.5);
+    word-wrap: break-word;
+    opacity: 0; /* Start with 0 opacity */
+    transition: opacity 1.2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
+  
+  #vitrinThirdLineFirstItem:hover #txtIletisim {
+    opacity: 1; /* Change the opacity to 1 on hover */
+  }
+
+  #orangeFilter {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 68%;
+    height: 100%;
+    font-size: 16px;
+    line-height: 28px;
+    margin-top: 0%;
+    margin-left: 33.1%;
+    background-color: rgba(65, 40, 12, 0.5);
+    opacity: 0; /* Start with 0 opacity */
+    transition: opacity 1.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
+  
+  #vitrinThirdLineFirstItem:hover #orangeFilter {
+    opacity: 1; /* Change the opacity to 1 on hover */
+  }
+
+ /******************FOOTER**************************/
+
+        #footer{
+            position: relative;
+            width: 75%;
+            height: 30%;
+            margin: auto;
+            margin-top: 1%;
+            background-color: #0D4559;
+            font-family: 'Mulish', sans-serif;
+            font-size: 16px;
+            font-weight: normal;
+            padding:5% 0 2% 0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        #footerSectionContainer{
+            width:100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .sections{
+            justify-content: center;
+            width: 20%;
+            margin-left: 1%;
+            margin-right: 1%;
+        }
+        .titles{
+            color:white;
+            font-weight: 500;
+        }
+        .contentLinks{
+            margin-top:5%;
+            display: flex;
+            flex-direction: column;
+            font-size: 13px;
+        }
+        .contentLinks a{
+            color:rgb(176, 175, 180);
+            text-decoration: none;
+            padding: 0;
+            margin-top: 5%;
+            }
+            #footerSocial {
+                margin: auto;
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                padding: 6% 0 3% 0;
+              }
+              #footerSocial a {
+                width: 3%; /* Remove percentage-based width */
+                height: 32%; /* Set height to 100% to maintain proportions */
+                max-width: 32%; /* Ensure the image doesn't exceed its container's width */
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                margin-left: 1%;
+                margin-left: 1%;
+              }
+              #footerSocial img {
+                width: 62%; /* Remove percentage-based width */
+                height: 62%; /* Set height to 100% to maintain proportions */
+                max-width: 62%; /* Ensure the image doesn't exceed its container's width */
+                
+            }
+        #footerSignature{
+            margin: auto;
+            width: 100%;
+            height: 20px;
+            padding-top: 1%;
+            display: flex;
+            flex-direction: row;
+            font-family: 'Mulish', sans-serif;
+            font-size: 11px;
+            font-weight: normal;
+            color: rgb(176, 175, 180);
+            justify-content: center;
+            position: relative;
+            
+        }
+        #footerSignature a{
+            text-decoration: none;
+            color: rgb(176, 175, 180);
+            margin-left: .5%;
+            }
+/*******************CAROUSEL**********************/
+/**************************************************/
+/**********************MOTTO****************************/
+/**************************************************/
+/************************FOOTER**************************/
+
+@media (max-width:1200px) and (min-width:900px) {
+    .carousel-img-size{
+            height:85vh;
+            margin-top: 0.2%;  
+        }
+         .carousel-img-size img{
+            width:100%;
+            height:350px;  
+        }
+        #carouselExampleIndicators{
+            padding-top: 6.5%;
+            height:54vh;
+            background:none;
+        }
+        
+        .carousel-control-prev{
+            margin-left:5%;
+            margin-top: 25%;
+          }
+        .carousel-control-next{
+            margin-right:5%;
+            margin-top: 25%;
+        }
+              /*threeDots*/ 
+        .carousel-indicators{
+            width: 9%;
+            margin:auto;
+            margin-bottom:1%;
+        }
+        
+        #motto{
+            padding-top:7%;
+            padding-bottom:2%;
+        }
+     
+             #footerSocial a {
+                width: 7%; /* Remove percentage-based width */
+          } 
+}
+@media (max-width:900px) and (min-width:700px) {
+    .carousel-img-size{
+            height:70vh;
+            margin-top: 0.2%;  
+        }
+         .carousel-img-size img{
+            width:100%;
+            height:350px;  
+        }
+        #carouselExampleIndicators{
+            padding-top: 9.4%; 
+            background:none;
+            height:60vh;
+        }
+        .carousel-control-prev{
+            margin-left:5%;
+            margin-top: 25%;
+          }
+        .carousel-control-next{
+            margin-right:5%;
+            margin-top: 25%;
+        }
+        .carousel-control-next-icon,
+        .carousel-control-prev-icon {
+          width: 14px;
+          height: 14px;
+        }
+               /*threeDots*/ 
+        .carousel-indicators{
+            width: 10%;
+            margin:auto;
+            margin-bottom:25px;
+        }
+          #footerSocial a {
+                width: 7%; /* Remove percentage-based width */
+          } 
+}
+@media (max-width:700px) and (min-width:600px) {
+    .carousel-img-size{
+            height:70vh;
+            margin-top: 0.2%;  
+        }
+         .carousel-img-size img{
+            width:100%;
+            height:350px;  
+        }
+        #carouselExampleIndicators{
+            padding-top: 11.4%; 
+            background:none;
+            height:60vh;
+        }
+        .carousel-control-prev{
+            margin-left:5%;
+            margin-top: 30%;
+          }
+        .carousel-control-next{
+            margin-right:5%;
+            margin-top: 30%;
+        }
+        .carousel-control-next-icon,
+        .carousel-control-prev-icon {
+          width: 14px;
+          height: 14px;
+        }
+               /*threeDots*/ 
+        .carousel-indicators{
+            width: 10%;
+            margin:auto;
+            margin-bottom:25px;
+        }
+          h1{
+            font-size:25px;
+        }
+        
+        h2{
+            font-size:18px;
+        }
+        #footerSocial a {
+                width: 8%; 
+          } 
+}
+@media (max-width:600px) and (min-width:500px) {
+    .carousel-img-size{
+            height:70vh;
+            margin-top: 0.2%;  
+        }
+         .carousel-img-size img{
+            width:100%;
+            height:350px;  
+        }
+        #carouselExampleIndicators{
+            padding-top: 13%; 
+            background:none;
+            height:60vh;
+        }
+        .carousel-control-prev{
+            margin-left:5%;
+            margin-top: 40%;
+          }
+        .carousel-control-next{
+            margin-right:5%;
+            margin-top: 40%;
+        }
+        .carousel-control-next-icon,
+        .carousel-control-prev-icon {
+          width: 14px;
+          height: 14px;
+        }
+               /*threeDots*/ 
+        .carousel-indicators{
+            width: 10%;
+            margin:auto;
+            margin-bottom:25px;
+        }
+          h1{
+            font-size:25px;
+        }
+        
+        h2{
+            font-size:18px;
+        }
+        #footerSocial a {
+                width: 8%; 
+          } 
+}
+
+@media (max-width:500px) and (min-width:400px) {
+    .carousel-img-size{
+            height:70vh;
+            margin-top: 0.2%;  
+        }
+         .carousel-img-size img{
+            width:100%;
+            height:350px;  
+        }
+        #carouselExampleIndicators{
+            padding-top: 15%; 
+            background:none;
+            height:60vh;
+        }
+        .carousel-control-prev{
+            margin-left:5%;
+            margin-top: 50%;
+          }
+        .carousel-control-next{
+            margin-right:5%;
+            margin-top: 50%;
+        }
+        .carousel-control-next-icon,
+        .carousel-control-prev-icon {
+          width: 14px;
+          height: 14px;
+        }
+               /*threeDots*/ 
+        .carousel-indicators{
+            width: 15%;
+            margin:auto;
+            margin-bottom:25px;
+        }
+        
+        h1{
+            font-size:25px;
+        }
+        
+        h2{
+            font-size:18px;
+        }
+        #footerSocial a {
+                width: 8%; 
+          } 
+}
+
+
+@media (max-width:400px) and (min-width:300px) {
+    .carousel-img-size{
+            height:70vh;
+            margin-top: 0.2%;  
+        }
+         .carousel-img-size img{
+            width:100%;
+            height:350px;  
+        }
+        #carouselExampleIndicators{
+            padding-top: 20%; 
+            background:none;
+            height:60vh;
+        }
+        .carousel-control-prev{
+            margin-left:5%;
+            margin-top: 50%;
+          }
+        .carousel-control-next{
+            margin-right:5%;
+            margin-top: 50%;
+        }
+        .carousel-control-next-icon,
+        .carousel-control-prev-icon {
+          width: 14px;
+          height: 14px;
+        }
+               /*threeDots*/ 
+        .carousel-indicators{
+            width: 18%;
+            margin:auto;
+            margin-bottom:25px;
+        }
+        
+        h1{
+            font-size:25px;
+        }
+        
+        h2{
+            font-size:18px;
+        }
+        #footerSocial a {
+                width: 9%; 
+          } 
+}
+/***
+
+/****************************************************************/
+/*************************************************************/
+/***********************************************************/
+/*********************************************************/
+  /********************MOBILE******MENU************************/
+  @media (max-width:1200px) and (min-width:300px) {
+    .menu li a{
+        width: 100%;
+        color:#4E5B65;
+        display:block;
+        padding:  1%;
+        letter-spacing:0.1px;
+        font-size:17px;
+        font-weight:400;
+        line-height:30px;
+        transition:0.3s;
+        padding:2%;
+        text-align: center;    
+    }
+       
+       .hamburger,
+        .toggle-menu {
+        display:block;
+    }
+    
+        .menu{
+            justify-content:center;
+            align-content: center;
+            align-items: center;
+            flex-direction:column;
+            position:fixed;
+            top:-100%;
+            right:0;
+            background:white;
+            opacity:85%;
+            width:100%;
+            height:80%;
+            padding-top:25%;
+            padding-bottom:25%;
+            transition: top 1.1s; /* Add a transition for smooth sliding */
+
+        }
+
+        .navigation input:checked ~ .menu {
+            top: 0%; /* Slide down from the top (visible) when input is checked */
+        }
+
+        #linksContainer{
+            width:100%;
+            text-align: center;
+            flex-direction: column;
+            background-color: transparent;
+        }
+        #linksContainer a{
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        
+        #buttonContainer{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+      
+        .menu button {
+            width:10%;
+            border-radius: 50px;
+            background-color: orangered;
+            border: 0px;
+            border-color: none;
+            font-size: 18px;
+            color:white;
+            padding:10px;
+        }
+
+        #langlink{
+            font-size: 15px;
+        }
+   
+
+  /********************MOBILE**vitrine*************/
+        /*********************VITRIN********************************/
+/***************FirstItem*****************/
+
+#vitrinFirstLine {
+   
+    flex-direction: column;
+    padding-bottom: 0%;
+}
+#vitrinFirstLineFirstItem {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 2%;
+    background-color: none;
+    overflow: hidden;
+    position: relative;
+}
+#vitrinFirstLineFirstItem img {
+    background-color: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#vitrinFirstLineFirstItem a{
+    width:100%;
+}
+#legendKaz {
+    position: absolute;
+    margin-top: 12%; /* Adjust the top position as needed */
+    margin-left: 4%; /* Adjust the left position as needed */
+}
+#vitrinFirstLineFirstItem:hover #legendKaz{
+    transform: translate(0, -310%);
+    background-color: transparent;
+    color:rgba(255, 255, 255, 0.7);    
+}
+#txtKaz {
+    display: none;
+  }
+  
+/**************SECONDITEM*****************/
+#vitrinFirstLineSecondItem {
+    background-color: none;
+    width: 100%;
+    height: 100%;
+    padding-bottom:2%;
+    margin-left:0;
+}
+
+#vitrinFirstLineSecondItem img {
+    background-color: none;
+    width: 100%;
+    height: 100%; /* Allow the image to maintain its aspect ratio */
+    object-fit: cover;
+}
+#legendKultur {
+    position: absolute;
+    margin-top: 12%; /* Adjust the top position as needed */
+    margin-left: 4%; /* Adjust the left position as needed */
+}
+#vitrinFirstLineSecondItem:hover #legendKultur{
+    transform: translate(0, -300%);
+    background-color: transparent;
+    color:rgba(255, 255, 255, 0.7);   
+}
+#txtKultur {
+    display: none;
+  }
+  /*******************THIRDITEM*********************/
+#vitrinSecondLine {
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    margin: auto;
+    background-color: none;
+    height: 400px; /* Set the fixed height you want */
+    padding-bottom: 0%;
+}
+#vitrinSecondLineFirstItem {
+    background-color: none;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 2%;
+    overflow: hidden;
+    position: relative;
+}
+
+#vitrinSecondLineFirstItem img {
+    background-color: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#legendTarih {
+    position: absolute;
+    margin-top: 12%; /* Adjust the top position as needed */
+    margin-left: 4%; /* Adjust the left position as needed */
+}
+#vitrinSecondLineFirstItem:hover #legendTarih{
+    transform: translate(0, -317%);
+    background-color: transparent;
+    color:rgba(255, 255, 255, 0.7);
+}
+#txtTarih {
+    display: none;
+}
+  #vitrinSecondLineFirstItem:hover #txtTarih {
+    opacity: 1; /* Change the opacity to 1 on hover */
+  }
+/*****************FOURTHITEM********************/
+#vitrinSecondLine {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: auto;
+    background-color: none;
+    height: 400px; /* Set the fixed height you want */
+}
+#vitrinSecondLineSecondItem {
+    background-color: none;
+    width: 100%;
+    height: 100%;
+    margin-left: 0%;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 2%;
+}
+#vitrinSecondLineSecondItem img {
+    background-color: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#legendGaleri {
+    position: absolute;
+    margin-top: 12%; /* Adjust the top position as needed */
+    margin-left: 4%; /* Adjust the left position as needed */
+}
+#vitrinSecondLineSecondItem:hover #legendGaleri{
+    transform: translate(0, -310%);
+    background-color: transparent;
+    color:rgba(255, 255, 255, 0.7);
+}
+#txtGaleri {
+    display: none;
+  }
+  #vitrinSecondLineSecondItem:hover #txtGaleri {
+    opacity: 1; /* Change the opacity to 1 on hover */
+  }
+/**************************FIFTHITEM**********************/
+
+#vitrinThirdLine {
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    margin: auto;
+    background-color: none;
+    height: 200px; /* Set the fixed height you want */
+}
+#vitrinThirdLineFirstItem {
+    background-color: none;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+#vitrinThirdLineFirstItem img {
+    background-color: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#legendIletisim {
+    position: absolute;
+    margin-top: 12%; /* Adjust the top position as needed */
+    margin-left: 4%; /* Adjust the left position as needed */
+}
+#txtIletisim{
+    display:none;
+}
+#vitrinThirdLineFirstItem:hover #legendIletisim{
+    transform: translate(0, -495%);
+    background-color: transparent;
+    color:rgba(255, 255, 255, 0.7);
+}
+  #vitrinThirdLineFirstItem:hover #txtIletisim {
+    opacity: 1; /* Change the opacity to 1 on hover */
+  }
+  #orangeFilter {
+    display: none;
+  }
+    }
+/********************************************************************/
+/*******************LEGENDS*************************************************/
+
+@media (max-width:1199px) and (min-width:700px){
+    #legendKaz {
+    margin-top: 12%;
+    font-size: 23px;
+    }
+    #legendKultur{
+    margin-top: 12%;
+    font-size: 23px;
+    }
+    #legendTarih{
+    margin-top: 12%;
+    font-size: 23px;
+    }
+    #legendGaleri{
+    margin-top: 12%;
+    font-size: 23px;
+    }
+    #legendIletisim{
+    margin-top: 12%;
+    font-size: 23px;
+    }
+}
+
+
+
+
+@media (max-width:700px) and (min-width:300px){
+    #legendKaz {
+    margin-top: 28%;
+    font-size: 20px;
+    }
+    #legendKultur{
+    margin-top: 28%;
+    font-size: 20px;
+    }
+    #legendTarih{
+    margin-top: 28%;
+    font-size: 20px;
+    }
+    #legendGaleri{
+    margin-top: 28%;
+    font-size: 20px;
+    }
+    #legendIletisim{
+    margin-top: 28%;
+    font-size: 20px;
+    }
+}
+
+/************************************************************************/
+@media (max-width:1300px) and (min-width:1200px) {
+
+#legendKaz {
+    margin-top: 47%; /* Adjust the top position as needed */
+    margin-left: 3%; /* Adjust the left position as needed */
+    padding: 5px 5px 5px 5px;
+}
+
+#txtKaz {
+    padding: 4% 3% 3% 3.4%; /* Adjust padding as needed */
+    height: 160%; /* Cover the entire height of the container */
+    margin-top: 30%;
+    
+  }
+
+#legendKultur {
+    margin-top: 94%; /* Adjust the top position as needed */
+    margin-left: 6%; /* Adjust the left position as needed */
+    padding: 5px 5px 5px 5px;
+}
+
+#txtKultur {
+    padding: 4% 3% 3% 3.4%; /* Adjust padding as needed */
+    height: 160%; /* Cover the entire height of the container */
+    margin-top: 60%;
+    
+  }
+
+  #legendGaleri {
+    margin-top: 47%; /* Adjust the top position as needed */
+    margin-left: 3%; /* Adjust the left position as needed */
+    padding: 5px 5px 5px 5px;
+}
+
+#txtGaleri {
+    padding: 4% 3% 3% 3.4%; /* Adjust padding as needed */
+    height: 160%; /* Cover the entire height of the container */
+    margin-top: 30%;
+  }
+#legendTarih {
+    margin-top: 94%; /* Adjust the top position as needed */
+    margin-left: 6%; /* Adjust the left position as needed */
+    padding: 5px 5px 5px 5px;
+}
+
+#txtTarih {
+    padding: 4% 3% 3% 3.4%; /* Adjust padding as needed */
+    height: 160%; /* Cover the entire height of the container */
+    margin-top: 60%;
+    
+  }
+#legendIletisim{
+    margin-top: 32%; /* Adjust the top position as needed */
+    padding: 5px 5px 5px 5px;
+}
+
+#txtIletisim {
+    padding: 11% 3% 5% 3.4%; /* Adjust padding as needed */
+    height: 160%; /* Cover the entire height of the container */
+    margin-top: 0%;
+  }
+
+}
+
+
+@media (max-width:1400px) and (min-width:1300px) {
+    
+    #legendKaz {
+        margin-top: 45%; /* Adjust the top position as needed */
+        margin-left: 3%; /* Adjust the left position as needed */
+        padding: 5px 5px 5px 5px;
+    }
+    
+    #txtKaz {
+        padding: 4% 3% 3% 3.4%; /* Adjust padding as needed */
+        height: 160%; /* Cover the entire height of the container */
+        margin-top: 30%;
+        
+      }
+    
+    #legendKultur {
+        margin-top: 94%; /* Adjust the top position as needed */
+        margin-left: 6%; /* Adjust the left position as needed */
+        padding: 5px 5px 5px 5px;
+    }
+    
+    #txtKultur {
+        padding: 4% 3% 3% 3.4%; /* Adjust padding as needed */
+        height: 160%; /* Cover the entire height of the container */
+        margin-top: 60%;
+        
+      }
+    
+      #legendGaleri {
+        margin-top: 47%; /* Adjust the top position as needed */
+        margin-left: 3%; /* Adjust the left position as needed */
+        padding: 5px 5px 5px 5px;
+    }
+    
+    #txtGaleri {
+        padding: 4% 3% 3% 3.4%; /* Adjust padding as needed */
+        height: 160%; /* Cover the entire height of the container */
+        margin-top: 30%;
+      }
+    #legendTarih {
+        margin-top: 94%; /* Adjust the top position as needed */
+        margin-left: 6%; /* Adjust the left position as needed */
+        padding: 5px 5px 5px 5px;
+    }
+    
+    #txtTarih {
+        padding: 4% 3% 3% 3.4%; /* Adjust padding as needed */
+        height: 160%; /* Cover the entire height of the container */
+        margin-top: 60%;
+        
+      }
+    #legendIletisim{
+        margin-top: 32%; /* Adjust the top position as needed */
+        padding: 5px 5px 5px 5px;
+    }
+
+    #vitrinThirdLineFirstItem:hover #legendIletisim{
+        transform: translate(0, -515%);        
+    }
+    
+    #txtIletisim {
+        padding: 11% 3% 5% 3.4%; /* Adjust padding as needed */
+        height: 160%; /* Cover the entire height of the container */
+        margin-top: 0%;
+      }
+    
+    }
+
+    @media (max-width:1500px) and (min-width:1400px) {
+    
+        #legendKaz {
+            margin-top: 40%; /* Adjust the top position as needed */
+            margin-left: 3%; /* Adjust the left position as needed */
+            padding: 5px 5px 5px 5px;
+        }
+        
+        #txtKaz {
+            padding: 4% 3% 3% 3.4%; /* Adjust padding as needed */
+            height: 160%; /* Cover the entire height of the container */
+            margin-top: 25%;
+            
+          }
+        
+        #legendKultur {
+            margin-top: 81%; /* Adjust the top position as needed */
+            margin-left: 6%; /* Adjust the left position as needed */
+            padding: 5px 5px 5px 5px;
+        }
+        
+        #txtKultur {
+            padding: 4% 3% 3% 6.8%; /* Adjust padding as needed */
+            height: 160%; /* Cover the entire height of the container */
+            margin-top: 50%;
+            
+          }
+        
+          #legendGaleri {
+            margin-top: 40%; /* Adjust the top position as needed */
+            margin-left: 3%; /* Adjust the left position as needed */
+            padding: 5px 5px 5px 5px;
+        }
+        
+        #txtGaleri {
+            padding: 4% 3% 3% 3.4%; /* Adjust padding as needed */
+            height: 160%; /* Cover the entire height of the container */
+            margin-top: 25%;
+          }
+        #legendTarih {
+            margin-top: 81%; /* Adjust the top position as needed */
+            margin-left: 6%; /* Adjust the left position as needed */
+            padding: 5px 5px 5px 5px;
+        }
+        
+        #txtTarih {
+            padding: 4% 3% 3% 6.8%; /* Adjust padding as needed */
+            height: 160%; /* Cover the entire height of the container */
+            margin-top: 50%;
+            
+          }
+        #legendIletisim{
+            margin-top: 28%; /* Adjust the top position as needed */
+            padding: 5px 5px 5px 5px;
+        }
+    
+        #vitrinThirdLineFirstItem:hover #legendIletisim{
+            transform: translate(0, -510%);        
+        }
+        
+        #txtIletisim {
+            padding: 11% 3% 5% 2.2%; /* Adjust padding as needed */
+            height: 160%; /* Cover the entire height of the container */
+            margin-top: 0%;
+          }
+        
+        }
+       
+
+/**************NavFrame ****LOGO*****************************/
+
+@media (max-width:1700px) and (min-width:1200px){
+     #mainNavFrame{
+   
+    height:11%;
+    }
+.logoImage{
+    width:83px;
+}
+
+.mottoContainer{
+    padding-left: .5%;
+}
+
+}
+
+
+
+@media (max-width:1200px) and (min-width:800px){
+     #mainNavFrame{
+   
+    height:11%;
+    }
+.logoImage{
+    width:83px;
+}
+
+.mottoContainer{
+    padding-left: 2.5%;
+}
+}
+
+
+@media (max-width:800px) and (min-width:650px){
+     #mainNavFrame{
+   
+    height:11%;
+    }
+.logoImage{
+    width:83px;
+}
+
+.mottoContainer{
+    padding-left: 3.5%;
+}
+}
+@media (max-width:650px) and (min-width:550px){
+     #mainNavFrame{
+   
+    height:11%;
+    }
+.logoImage{
+    width:83px;
+}
+
+.mottoContainer{
+    padding-left: 4.5%;
+}
+}
+
+
+@media (max-width:550px) and (min-width:450px){
+     #mainNavFrame{
+    height:11%;
+    }
+.logoImage{
+    width:63px;
+}
+.mottoContainer{
+    padding-left: 4.5%;
+}
+}
+
+@media (max-width:450px) and (min-width:350px){
+     #mainNavFrame{
+    height:11%;
+    }
+.logoImage{
+    width:53px;
+}
+.mottoContainer{
+    padding-left: 5.5%;
+}
+}
