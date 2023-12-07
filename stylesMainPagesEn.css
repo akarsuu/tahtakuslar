@@ -322,6 +322,9 @@ h3{
     flex-direction:column;
     width:75%;
     margin:auto;
+    z-index:33;
+    margin-top:2%;
+    line-height:35px;
 }
 
 @media (max-width:4000px) and (min-width:3000px){
